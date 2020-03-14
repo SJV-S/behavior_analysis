@@ -52,7 +52,8 @@ def freq_calc(all_data):
 
 def daily(start_date,
           PosCorErrRec=None,
-          width=10, show=False,
+          width=10,
+          show=False,
           save_to=None,
           phase_lin=None,
           aimstars=None,
