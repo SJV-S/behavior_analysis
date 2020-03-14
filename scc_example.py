@@ -3,7 +3,7 @@ import scc
 import numpy as np
 
 # First, let's generate some data.
-# Arguments: initial value, number of data points, cel slope, variability as n-100%)
+# Arguments: initial value, number of data points, cel slope, variability as n-100%
 cor_cond_1 = scc.gen_data(5, 30, 1, 40)
 cor_cond_2 = scc.gen_data(5, 20, 1.2, 40)
 corrects = cor_cond_1 + cor_cond_2
