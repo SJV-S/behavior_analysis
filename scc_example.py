@@ -16,7 +16,7 @@ minutes = 1
 position = np.arange(1, len(corrects) + 1)   # Generate x coordinates. Remember to start at 1.
 record_floor = [minutes] * len(corrects)  # Generate record floor
 
-# The length of these arrays need to the the same! Pad shorter arrays with None.
+# The length of these arrays need to be the same! Pad shorter arrays with None.
 # If errors are not counted, pad error array with None values. For example: errors = [None] * len(corrects)
 data = [position, corrects, errors, record_floor]
 
