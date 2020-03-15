@@ -52,12 +52,11 @@ def freq_calc(all_data):
 
 def daily(start_date,
           PosCorErrRec=None,
-          width=10,
-          show=False,
+          width=10, show=False,
           save_to=None,
           phase_lin=None,
           aimstars=None,
-          title="title",
+          title="",
           y_label="Count per Minute",
           cor_label="Correct freq",
           err_label="Error freq"):
@@ -148,7 +147,7 @@ def daily(start_date,
     # Set axis labels and title
     ax.set_ylabel(y_label, fontname=font, fontsize=13)
     ax.set_xlabel("Successive Calendar Days", fontname=font, fontsize=13)
-    plt.title("")
+    plt.title(title)
     ax.text(0.05, 0.05, 'By SJV', transform=plt.gcf().transFigure, fontname=font, fontsize=7)
 
     # Calculate frequency based on count and record floor.
@@ -181,7 +180,6 @@ def daily(start_date,
         plt.savefig(save_to + "\\" + title)
     if show:
         plt.show()
-
 
 
 
