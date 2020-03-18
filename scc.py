@@ -4,9 +4,6 @@ import numpy as np
 import pandas as pd
 import random
 
-from pandas.plotting import register_matplotlib_converters
-register_matplotlib_converters()
-
 
 def gen_data(start, num, cel, bounce):
     value = start
@@ -99,7 +96,7 @@ def daily(start_date,
     first_sunday = start_date - pd.Timedelta(start_date.dayofweek + 1, unit="D")  # Find last Sunday.
     dates = pd.date_range(first_sunday, periods=21, freq="W").strftime("%d-%m-%y")  # Get date labels for top x-axis.
 
-    # Setup up top x-axis.
+    # Set up up top x-axis.
     ax2 = plt.twiny()
     ax2.set_xticks(top_x_ticks)
     ax2.set_xticklabels(dates, rotation=45, fontsize=9, fontname=font)
@@ -180,8 +177,4 @@ def daily(start_date,
         plt.savefig(save_to + "\\" + title)
     if show:
         plt.show()
-
-
-
-
-
+    plt.close()
