@@ -6,4 +6,12 @@ numpy
 matplotlib
 pandas
 
-Current version: 1.0
+Version history:
+1.0
+1.1
+- Can chart duration.
+- Rescaling fix.
+- Layout and color modification.
+- Frequency calculation has been moved to a separate function.
+
+
