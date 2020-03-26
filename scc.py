@@ -91,7 +91,6 @@ def daily(start_date,
 
     start_date = pd.to_datetime(start_date)  # Convert to pandas datetime format.
     first_sunday = start_date - pd.Timedelta(start_date.dayofweek + 1, unit="D")  # Find last Sunday.
-    # date_diff = pd.Timedelta(start_date - first_sunday).days
 
     dates = pd.date_range(first_sunday, periods=21, freq="W").strftime("%d-%b-%y")  # Get date labels for top x-axis.
 
